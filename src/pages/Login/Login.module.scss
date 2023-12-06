@@ -7,13 +7,13 @@
   flex-direction: column;
   max-width: 300px;
   width: 100%;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
   margin: auto;
   border-radius: 0.5rem;
   background-color: var(--primary);
 }
 
-.label {
+.label, .persist-check label {
   color: var(--white);
 }
 

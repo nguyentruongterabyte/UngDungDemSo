@@ -1,0 +1,140 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  .log-out-btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0 10px;
+    cursor: pointer;
+  }
+}
+
+.messenger {
+  --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --msger-bg: #fff;
+  --border: 2px solid #ddd;
+  --left-msg-bg: #ececec;
+  --right-msg-bg: #579ffb;
+  display: flex;
+  flex-direction: column;
+  flex-grow: column wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 867px;
+  margin: 24px 10px;
+  height: calc(100% - 50px);
+  border: var(--border);
+  border-radius: 5px;
+  background: var(--msger-bg);
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, .2);
+  .messenger-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: var(--border);
+    background: #eee;
+    color: #666;
+  }
+  .sum {
+    font-size: 3rem;
+    
+  }
+
+  .messenger-chat {
+    // flex: 1;
+    height: 70vh;
+    overflow-y: auto;
+    padding: 10px;
+    
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #ddd;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #bdbdbd;
+    }
+  }
+  
+  .message {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .message-bubble {
+    max-width: 450px;
+    padding: 16px;
+    border-radius: 15px;
+    background: var(--left-msg-bg);
+  }
+  
+  .message-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .message-info-name {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .message-info-time {
+    font-size: 0.85rem;
+  }
+  
+  .left-message {
+    .message-bubble {
+      border-bottom-left-radius: 0;
+    }
+  }
+  
+  .right-message {
+    flex-direction: row-reverse;
+    .message-bubble {
+      background: var(--right-msg-bg);
+      color: var(--white);
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .messenger-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: var(--border);
+    background: #eee;
+    * {
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      font-size: 1em;
+    }
+    .messenger-input {
+      flex: 1;
+      background: #ddd;
+    }
+    .messenger-send-btn {
+      margin-left: 10px;
+      background: rgb(0, 196, 65);
+      color: var(--white);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background .23s;
+      &:hover {
+        background: rgb(0, 180, 50);
+      }
+    }
+  }
+
+  .message-chat {
+    background-color: #fcfcfe;
+  }
+}

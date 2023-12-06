@@ -4,6 +4,9 @@ import config from '~/config';
 
 export default axios.create({
   baseURL: config.constants.SERVER,
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
 export const axiosPrivate = axios.create({
